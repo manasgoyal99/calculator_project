@@ -1,50 +1,30 @@
 
 # ADDITION NUMBERS
 
-def ADDITION():
-    num1 = float(input("Enter The First Number: "))
-    num2 = float(input("Enter The Second Number: "))
-    
-    print("--------------------------------------")
-    print("Addition:", num1 + num2)
-    print("--------------------------------------")
+class calculation: 
+    def __init__(self,number1,number2):
+        self.number1 = number1
+        self.number2 = number2
 
-
-# SUBTRACTION NUMBERS
-
-def SUBTRACTION():
-
-    num1 = float(input("Enter The First Number: "))
-    num2 = float(input("Enter The Second Number: "))
-    
-    print("--------------------------------------")
-    print("Subtraction:", num1 - num2)
-    print("--------------------------------------")
-
-
-# MULTIPLICATION NUMBERS
-
-def MULTIPLICATION():
-    num1 = float(input("Enter The First Number: "))
-    num2 = float(input("Enter The Second Number: "))
-    
-    print("--------------------------------------")
-    print("Multiplication:", num1 * num2)
-    print("--------------------------------------")
-
-
-# DIVISION NUMBERS
-
-def DIVISION():
-    num1 = float(input("Enter The First Number: "))
-    num2 = float(input("Enter The Second Number: "))
-    
-    print("--------------------------------------")
-    if num2 == 0: 
-        print("Error: Cannot divide by zero!")
-    else:
-        print("Division:", num1 / num2)
-    print("--------------------------------------")
+    def ADDITION(self):
+        print("-"*30)
+        print("Addition:", self.number1 + self.number2)
+        print("-"*30)
+    def SUBTRACTION(self):
+        print("-"*30)
+        print("Subtraction:", self.number1 - self.number2)
+        print("-"*30)
+    def MULTIPLICATION(self):
+        print("-"*30)
+        print("Multiplication:", self.number1 * self.number2)
+        print("-"*30)
+    def DIVISION(self):
+        print("-"*30)
+        if self.number2 == 0:
+            print("Error: Cannot divide by zero!")
+        else:
+            print("Division:", self.number1 / self.number2)
+        print("-"*30)    
 
 # CALCULATOR APP MENU
 
@@ -59,22 +39,34 @@ while True:
     print("5. EXIT")
 
     choice = int(input("Enter your choice: "))
-
+    
     if choice == 1:
 
-        ADDITION()
+        number1 = float(input("Enter The First Number: "))
+        number2 = float(input("Enter The Second Number: "))
+        obj1 = calculation(number1,number2)
+        obj1.ADDITION()
 
     elif choice == 2:
 
-        SUBTRACTION()
+        number1 = float(input("Enter The First Number: "))
+        number2 = float(input("Enter The Second Number: "))
+        obj1 = calculation(number1,number2)
+        obj1.SUBTRACTION()
 
     elif choice == 3:
 
-        MULTIPLICATION()
+        number1 = float(input("Enter The First Number: "))
+        number2 = float(input("Enter The Second Number: "))
+        obj1 = calculation(number1,number2)
+        obj1.MULTIPLICATION()
 
     elif choice == 4:
 
-        DIVISION()
+        number1 = float(input("Enter The First Number: "))
+        number2 = float(input("Enter The Second Number: "))
+        obj1 = calculation(number1,number2)
+        obj1.DIVISION()
 
     elif choice == 5:
         print("Thank you for using CALCULATOR APP!")
